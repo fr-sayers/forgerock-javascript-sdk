@@ -13,14 +13,14 @@ import * as forgerock from '@forgerock/javascript-sdk';
 const FATAL = 'Fatal';
 
 forgerock.Config.set({
-  clientId: process.env.WEB_OAUTH_CLIENT, // e.g. 'ForgeRockSDKClient'
-  redirectUri: process.env.REDIRECT_URI, // e.g. 'https://sdkapp.example.com:8443/central-login/'
-  scope: process.env.SCOPE, // e.g. 'openid profile me.read'
+  clientId: 'cumulus', // e.g. 'ForgeRockSDKClient'
+  redirectUri: 'https://cumulus.forgerock.org/cb', // e.g. 'https://sdkapp.example.com:8443/central-login/'
+  scope: '', // e.g. 'openid profile me.read'
   serverConfig: {
-    baseUrl: process.env.AM_URL, // e.g. 'https://openam.example.com:9443/openam/'
-    timeout: process.env.TIMEOUT, // 3000 to 5000 is good, this impacts the redirect time to login
+    baseUrl: 'https://sso.forgerock.com/am', // e.g. 'https://openam.example.com:9443/openam/'
+    timeout: 3000, // 3000 to 5000 is good, this impacts the redirect time to login
   },
-  realmPath: process.env.REALM_PATH, // e.g. 'root'
+  realmPath: "community", // e.g. 'root'
 });
 
 // Show only the view for this handler

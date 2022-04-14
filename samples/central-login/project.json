@@ -29,7 +29,7 @@
         "port": 8443,
         "ssl": true,
         "open": true,
-        "host": "sdkapp.example.com",
+        "host": "local-backstage.forgerock.com",
         "liveReload": true
       }
     },
